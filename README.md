@@ -140,7 +140,7 @@ git push origin feature-name
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the **Creative Commons Attribution-NonCommercial-NoDerivatives (CC BY-NC-ND)** License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
