@@ -1,0 +1,11 @@
+{
+    "token": "Your-Bot_Token",
+    "clientId": "Your-Bot-ClientID",
+    "version": "1.0",
+    "guildId": "The Server ID of which to use the bot in",
+    "adminId": "The user ID for who should be able to use the !kill and !restart commands",
+    "prefix": "The Prefix to use for Admin Commands",  
+    "musicFolder": "./music/",
+    "activityType": "LISTENING",
+    "defaultVolume": 0.5
+}

@@ -1,0 +1,4 @@
+config.json
+music/*
+thumbnails/*
+node_modules/
