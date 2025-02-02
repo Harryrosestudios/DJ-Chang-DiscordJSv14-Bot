@@ -3,9 +3,8 @@ const { EmbedBuilder, AttachmentBuilder } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
-const lines = require('../lines.json'); // Importing lines.json
+const lines = require('../lines.json'); 
 
-// Helper function to get a random line from lines.json
 function getRandomLine(section, songName) {
     const sectionLines = lines[section];
     if (!sectionLines || !sectionLines.length) return `Now Playing: ${songName}`;
@@ -19,7 +18,7 @@ module.exports = {
     options: [
         {
             name: 'song',
-            type: 3, // STRING
+            type: 3, 
             description: 'The name of the song to play (optional).',
             required: false,
         },
@@ -110,7 +109,7 @@ function playSong(guildId, client) {
             serverQueue.connection.destroy();
             client.queue.delete(guildId);
         }
-        client.updateBotStatus(); // Update status via client object
+        client.updateBotStatus(); // Update status via client object (broken)
         return;
     }
 
@@ -121,7 +120,7 @@ function playSong(guildId, client) {
         serverQueue.audioPlayer.play(resource);
         serverQueue.connection.subscribe(serverQueue.audioPlayer);
         serverQueue.currentSong = song;
-        client.updateBotStatus(); // Update status via client object
+        client.updateBotStatus(); // Update status via client object (broken)
 
         serverQueue.audioPlayer.once(AudioPlayerStatus.Idle, () => {
             serverQueue.songs.shift();
@@ -146,8 +145,8 @@ async function displayEmbed(interaction, currentSong) {
             null;
 
         const embed = new EmbedBuilder()
-            .setTitle(`Now Playing: ${songName}`) // Updated header format
-            .setDescription(getRandomLine('new_song', songName)) // Using lines.json for random line
+            .setTitle(`Now Playing: ${songName}`) 
+            .setDescription(getRandomLine('new_song', songName))
             .setColor(0x1DB954)
             .setFooter({ text: 'Enjoy your music!' });
 

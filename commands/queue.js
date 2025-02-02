@@ -4,7 +4,7 @@ module.exports = {
     options: [
         {
             name: 'song',
-            type: 3, // STRING
+            type: 3, 
             description: 'The name of the song to move next in the queue.',
             required: true,
         },
@@ -23,7 +23,7 @@ module.exports = {
         }
 
         const [song] = queue.splice(songIndex, 1);
-        queue.splice(1, 0, song); // Move it to position 1 (next in queue)
+        queue.splice(1, 0, song); 
 
         await interaction.reply(`Moved **${song.name}** to next in the queue.`);
     },

@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const config = require('./config.json');
 
-// Create a new Discord client
+// Create Discord client
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -33,7 +33,7 @@ for (const file of prefixCommandFiles) {
     client.prefixCommands.set(command.name, command);
 }
 
-// Update bot status dynamically
+// Update bot status dynamically (Broken)
 function updateBotStatus() {
     const activeQueue = [...client.queue.values()].find(q => q.currentSong);
     if (activeQueue?.currentSong) {
@@ -43,7 +43,7 @@ function updateBotStatus() {
     }
 }
 
-// Attach updateBotStatus to the client so it can be accessed globally
+// Attach updateBotStatus to the client so it can be accessed globally (broken)
 client.updateBotStatus = updateBotStatus;
 
 // Play a song in the queue
@@ -95,7 +95,7 @@ function setInactivityTimeout(guildId) {
             client.queue.delete(guildId);
             client.updateBotStatus();
         }
-    }, 60000); // 1 minute timeout
+    }, config.inactivityTimeout); 
 }
 
 // Bot ready event

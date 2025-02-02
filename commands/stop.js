@@ -11,15 +11,13 @@ module.exports = {
             return interaction.reply('The bot is not connected to any voice channel.');
         }
 
-        // Stop the audio player and destroy the connection
         serverQueue.audioPlayer.stop();
         serverQueue.connection.destroy();
 
-        // Clear the queue and delete the guild's queue entry
         interaction.client.queue.delete(guildId);
 
-        // Update bot status to "Idle"
-        interaction.client.updateBotStatus();
+        // Update bot status to "Idle" (broken sys)
+       interaction.client.updateBotStatus();
 
         return interaction.reply('Stopped playback and disconnected from the voice channel.');
     },

@@ -1,5 +1,5 @@
 const { EmbedBuilder } = require('discord.js');
-const config = require('../config.json'); // Load config.json for version and other details
+const config = require('../config.json');
 
 module.exports = {
     name: 'info',
@@ -24,7 +24,7 @@ Use \`/help\` to get started.
 **Links:**
 - [Download Eternum](https://caribdis.itch.io/eternum)
 - [Listen to Omni's Playlist](https://www.youtube.com/playlist?list=PLSjFmFIO-Pcy0iLaVNJDDaTYzUYiCO9F-)
-- [GitHub](https://github.com/Harryrosestudios?tab=repositories)
+- [GitHub](https://github.com/Harryrosestudios/DJ-Chang-DiscordJSv14-Bot)
 - [See The Dev's Other Projects](https://hrdd.tech)
 
 **Call for Artists:**

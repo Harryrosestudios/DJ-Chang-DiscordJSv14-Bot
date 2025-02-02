@@ -11,7 +11,7 @@ module.exports = {
 
         if (serverQueue.audioPlayer.state.status === 'paused') {
             serverQueue.audioPlayer.unpause();
-            interaction.client.updateBotStatus(); // Explicit status update
+            interaction.client.updateBotStatus(); // Explicit status update (broken)
             return interaction.reply('Resumed the music!');
         } else {
             return interaction.reply('The music is not paused.');

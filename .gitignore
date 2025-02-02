@@ -2,3 +2,4 @@ config.json
 music/*
 thumbnails/*
 node_modules/
+.DS_Store

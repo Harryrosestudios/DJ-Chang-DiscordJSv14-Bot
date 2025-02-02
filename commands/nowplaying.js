@@ -2,9 +2,9 @@ const { EmbedBuilder, AttachmentBuilder } = require('discord.js');
 const { exec } = require('child_process');
 const path = require('path');
 const fs = require('fs');
-const lines = require('../lines.json'); // Importing lines.json
+const lines = require('../lines.json');
 
-// Helper function to get a random line from lines.json
+// Get a random line from lines.json
 function getRandomLine(section, songName) {
     const sectionLines = lines[section];
     if (!sectionLines || !sectionLines.length) return `Now Playing: ${songName}`;
@@ -35,8 +35,8 @@ module.exports = {
                 null;
 
             const embed = new EmbedBuilder()
-                .setTitle(`Now Playing: ${songName}`) // Updated header format
-                .setDescription(getRandomLine('now_playing', songName)) // Using "now_playing" section from lines.json
+                .setTitle(`Now Playing: ${songName}`) 
+                .setDescription(getRandomLine('now_playing', songName)) 
                 .setColor(0x1DB954)
                 .setFooter({ text: 'Enjoy your music!' });
 
